@@ -7,6 +7,11 @@ const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uran
 */
 const planetEl = document.getElementById("planets")
 
+for (let i = 0; i < planetEl.length; i++) {
+    console.log(`This is iteration ${i}`)
+}
+
+
 /*
     Use the map method to create a new array where the
     first letter of each planet is capitalized. Use the
