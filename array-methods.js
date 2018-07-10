@@ -5,11 +5,30 @@ const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uran
     to a section element in your HTML with an id of "planets".
     Use string templates to construct the DOM elements.
 */
+
+// Created a node object
+const toDom = document.createDocumentFragment();
+
+//This selects the planets ID on the index file.
 const planetEl = document.getElementById("planets")
 
-for (let i = 0; i < planetEl.length; i++) {
-    console.log(`This is iteration ${i}`)
-}
+//Created a function to create a list tag, then li.textContent to write to the DOM.
+const writeToDom = (solarPlanets) => {
+        const li = document.createElement("li");
+        li.textContent = solarPlanets;
+        toDom.appendChild(li);
+
+    }
+    //This runs through each item in the array.
+planets.forEach(writeToDom);
+
+
+
+//This appends the get element by ID to the document fragment.
+planetEl.appendChild(toDom);
+
+
+
 
 
 /*
